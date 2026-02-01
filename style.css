@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eef8ff, #ffffff);
+    color: #0a2540;
+}
+
+/* Navbar */
+.glass-navbar {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    padding: 14px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(135,206,235,0.35);
+    z-index: 1000;
+}
+
+.nav-left {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+}
+
+.nav-right a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 14px;
+    color: #0a2540;
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+}
+
+.nav-right a:hover {
+    background: rgba(135,206,235,0.45);
+    box-shadow: 0 0 18px rgba(135,206,235,0.6);
+    transform: translateY(-2px);
+}
+
+.nav-right a.active {
+    background: rgba(135,206,235,0.55);
+    box-shadow: 0 0 18px rgba(135,206,235,0.6);
+    font-weight: 600;
+}
+
+
+
+/* Hero */
+.hero {
+    min-height: auto;
+    padding: 140px 8% 40px; /* reduced top padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+
+
+.hero-left {
+    max-width: 520px;
+}
+
+.hero-left h1 {
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    opacity: 0.85;
+}
+
+/* Button */
+.glass-btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+
+    background: rgba(135,206,235,0.35);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(135,206,235,0.45);
+}
+
+/* Typing cursor */
+.cursor {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Profile */
+.profile-glass {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 15px 35px rgba(135,206,235,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-glass img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-glass {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* Education */
+.education {
+    padding: 70px 8% 90px;
+}
+
+.education h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+.edu-card {
+    padding: 28px 26px;
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 12px 35px rgba(135,206,235,0.35);
+    text-align: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(135,206,235,0.45);
+}
+
+/* Title */
+.edu-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Degree */
+.edu-degree {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+/* School */
+.edu-school {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+/* Meta info */
+.edu-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 14px;
+    border-top: 1px solid rgba(10,37,64,0.12);
+}
+
+/* Score */
+.edu-score {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0a2540;
+}
+
+/* Year */
+.edu-year {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 80px 6% 30px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile-glass {
+        width: 170px;
+        height: 170px;
+    }
+
+    /* TAB BAR */
+    .glass-navbar {
+        top: auto;
+        bottom: 12px;
+        width: 96%;
+        padding: 18px 14px; /* increased height */
+        border-radius: 26px;
+    }
+
+    .nav-left {
+        display: none;
+    }
+
+    .nav-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-right a {
+        flex: 1;
+        padding: 14px 0; /* taller touch area */
+        font-size: 14px;
+        border-radius: 20px;
+    }
+
+    .nav-right a.active {
+        box-shadow: 0 0 20px rgba(135,206,235,0.75);
+    }
+
+      .education {
+        padding: 60px 6% 110px; /* extra bottom space for tab bar */
+    }
+
+    .education h2 {
+        font-size: 24px;
+    }
+
+    .edu-card {
+        padding: 26px 22px;
+    }
+
+    .edu-meta {
+        font-size: 14px;
+    }
+}
+
